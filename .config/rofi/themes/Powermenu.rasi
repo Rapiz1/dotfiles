@@ -1,0 +1,71 @@
+configuration {
+    show-icons:true;
+}
+
+@import "colors"
+
+* {
+    columns: 1;
+    background-color: @xbg;
+    border-color: #00000000;
+    text-color: @xfg;
+    font: "Noto Sans CJK SC 32";
+}
+
+#window {
+    padding: 20% 40%;
+    fullscreen:true;
+	location: center;
+    border: 0;
+}
+
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    padding: 20px 20px;
+    border: 1px;
+    border-color: @base0D;
+}
+
+
+#listview {
+    background-color: #00000000;
+    border: 0px;
+    spacing: 20px;
+    scrollbar: false;
+}
+
+#element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 4px;
+    padding: 10;
+}
+
+#element selected {
+    background-color: @xbs;
+    text-color: @xfs;
+}
+
+
+#inputbar {
+    children:   [ entry ];
+    background-color: #00000000;
+}
+
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+    spacing:    0;
+}
+
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+}

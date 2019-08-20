@@ -1,0 +1,7 @@
+[https]
+[http]
+[user]
+	email = rapiz@foxmail.com
+	name = Rapiz
+[core]
+	editor = vim
