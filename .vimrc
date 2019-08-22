@@ -18,7 +18,10 @@ noremap<C-v> <Esc>"+p
 inoremap { {}<Esc>i
 " }}}
 " Greetings {{{
-autocmd VimEnter * echom "Happy Hacking:)"
+function ShowGreeting()
+  echom "Happy Hacking:)"
+endfunction
+autocmd VimEnter * call ShowGreeting()
 "}}}
 " Languages Specifics {{{
 function CreateCPP()
@@ -39,16 +42,19 @@ endfunction
 augroup cppGroup
   autocmd!
 " .cxx is recommended
-" autocmd BufNewFile *.cpp call CreateCPP()
   autocmd BufNewFile *.cxx call CreateCPP()
   autocmd FileType cpp call OpenCPP()
 augroup END
 
+function OpenVimConfig()
+  " Enable code folding
+  " Map <Enter> for code folding
+  setlocal foldmethod=marker
+  nnoremap <Enter> za
+endfunction
+
 augroup filetype_vim
   autocmd!
-  " Enable code folding
-  autocmd FileType vim setlocal foldmethod=marker
-  " Map <Enter> for code folding
-  nnoremap <Enter> za
+  autocmd FileType vim call OpenVimConfig()
 augroup END
 "}}}
