@@ -251,6 +251,7 @@ assign [class="VirtualBox"] 10
 # Auto float
 for_window [class="Petal"] floating enable
 for_window [class="card-demo"] floating enable
+for_window [class="netease-cloud-music"] floating enable
 # Auto move workspaces to screens
 workspace 10 output HDMI-2
 # DPI Setting
