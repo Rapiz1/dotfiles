@@ -28,7 +28,7 @@ function CreateCPP()
   0read ~/.vim/template/template.cpp
   :8
   :read !date -R
-  execute "normal i*          "
+  execute "normal i *          "
   :14
 endfunction 
 
