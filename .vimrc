@@ -24,6 +24,7 @@ endfunction
 autocmd VimEnter * call ShowGreeting()
 "}}}
 " Languages Specifics {{{
+" CPP
 function CreateCPP()
   0read ~/.vim/template/template.cpp
   :8
@@ -46,6 +47,7 @@ augroup cppGroup
   autocmd FileType cpp call OpenCPP()
 augroup END
 
+" Vim
 function OpenVimConfig()
   " Enable code folding
   " Map <Enter> for code folding
@@ -56,5 +58,20 @@ endfunction
 augroup filetype_vim
   autocmd!
   autocmd FileType vim call OpenVimConfig()
+augroup END
+
+" Python
+function OpenPython()
+  set tabstop=4
+  set softtabstop=4
+  set shiftwidth=4
+  set textwidth=79
+  set expandtab
+  set autoindent
+endfunction
+
+augroup filetype_py
+  autocmd!
+  autocmd FileType python call OpenPython()
 augroup END
 "}}}

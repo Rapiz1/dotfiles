@@ -54,12 +54,12 @@ font-1 = "MaterialIcons:size=12;4"
 font-2 = "Font Awesome 5 Free Regular:size=12;3"
 font-3 = "Font Awesome 5 Free Solid:size=12;3" 
 font-4 = "Font Awesome 5 Brands:size=12;3" 
-font-5 = "Symbols Nerd Font:size=13;3"
+font-5 = "Symbols Nerd Font:size=13;4"
 
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = player-mpris-tail pulseaudio backlight-acpi netspeed  filesystem   memory eth battery-combined-udev powerdevil ssr-status 
+modules-right = player-mpris-tail pulseaudio backlight-acpi netspeed  acm-code filesystem   memory eth battery-combined-udev powerdevil ssr-status 
 tray-position = right
 tray-maxsize = 22
 ;tray-padding = 2
@@ -98,6 +98,10 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
+[module/acm-code]
+type = custom/script
+exec = echo %{T6} %{T-}$(find ~/Source/acm -daystart -mtime 0 -name "*.cxx"|wc -l)
+interval = 3
 [module/docker-running]
 type = custom/script
 exec = echo 
