@@ -59,7 +59,7 @@ font-5 = "Symbols Nerd Font:size=13;4"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = player-mpris-tail pulseaudio backlight-acpi netspeed  acm-code filesystem   memory eth battery-combined-udev powerdevil ssr-status 
+modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed  acm-code filesystem   memory eth battery-combined-udev powerdevil ssr-status 
 tray-position = right
 tray-maxsize = 22
 ;tray-padding = 2
@@ -496,7 +496,7 @@ click-middle = ~/.config/polybar/scripts/player-mpris-tail.py -b chromium play-p
 [module/player-mpris-simple]
 type = custom/script
 exec = ~/.config/polybar/scripts/player-mpris-simple.sh
-interval = 3
+interval = 1
 click-left = playerctl previous
 click-right = playerctl next
 click-middle = playerctl play-pause
