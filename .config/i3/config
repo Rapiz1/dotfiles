@@ -231,13 +231,15 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-# Shutdown, reboot, lock
-set $Locker /home/rapiz/.local/bin/locker
+# Power Management
+exec --no-startup-id xset s 60 60
+exec --no-startup-id xset -dpms
+exec --no-startup-id xss-lock -n ~/Source/cmdlet/dim-screen.sh -- locker
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (p) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym l exec --no-startup-id locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym p exec --no-startup-id systemctl poweroff, mode "default"
 
@@ -258,7 +260,7 @@ workspace 10 output HDMI-2
 # exec --no-startup-id xrandr --dpi 220
 # Autostart
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/org_kde_powerdevil
+#exec --no-startup-id /usr/lib/org_kde_powerdevil
 exec --no-startup-id kdeconnect-indicator
 # Compositor
 exec --no-startup-id compton -b 

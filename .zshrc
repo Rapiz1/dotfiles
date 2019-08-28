@@ -96,10 +96,11 @@ export BROWSER="google-chrome-stable"
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 export PATH="$HOME/.local/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
-alias han="man -H"
+alias han="man -H 2>/dev/null"
 alias tss="proxychains"
 alias lsd="ls -ltr"
 alias diff="diff --color"
+alias run="i3-msg exec cd $(pwd) && "
 
 
 work=~/Source/work
