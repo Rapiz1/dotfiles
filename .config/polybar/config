@@ -21,7 +21,7 @@ background = #46000000
 background-alt = #46555555
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #00b5fa
 secondary = #e60053
 alert = #bd2c40
 
@@ -269,7 +269,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-date = %{A1:kill -s USR1 $(pidof deadd-notification-center):}%A, %d %B %Y  %H:%M:%%{F#fba922}%S%%{F-}%{A}
+date = %{A1:kill -s USR1 $(pidof deadd-notification-center):}%A, %d %B %Y  %H:%M:%%{F#00b5fa}%S%%{F-}%{A}
 ;date-alt = %Y/%m/%d  %H:%M:%%{F#fba922}%S%%{F-}
 
 [module/pulseaudio]
