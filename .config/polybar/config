@@ -25,6 +25,9 @@ primary = #00b5fa
 secondary = #e60053
 alert = #bd2c40
 
+blue = #00b5fa
+green = #00FF66
+
 [bar/example]
 ;monitor = ${env:MONITOR:}
 monitor = eDP-1
@@ -59,7 +62,7 @@ font-5 = "Symbols Nerd Font:size=13;4"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed  acm-code filesystem  memory eth battery-combined-udev ssr-status 
+modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed filesystem  memory eth battery-combined-udev acm-code ssr-status 
 tray-position = right
 tray-maxsize = 22
 ;tray-padding = 2
@@ -100,7 +103,8 @@ label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 [module/acm-code]
 type = custom/script
-exec = echo %{T6} %{T-}$(find ~/Source/acm -daystart -mtime 0 -name "*.cxx"|wc -l)
+exec = echo %{F#00FF66}%{u#00FF66}%{T6} %{T-}$(find ~/Source/acm -daystart -mtime 0 -name "*.cxx"|wc -l)%{u-}%{F-}
+exec-if = test $(find ~/Source/acm -daystart -mtime 0 -name "*.cxx"|wc -l) -gt 0
 interval = 3
 [module/docker-running]
 type = custom/script
