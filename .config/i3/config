@@ -187,12 +187,15 @@ bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
 bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
 # Screenshot
 bindsym Print exec "spectacle" 
-
+# Scratchpad
+bindsym $mod+o scratchpad show
+bindsym $mod+p move scratchpad
 # i3-gaps setting
 # Border size
 for_window [class="^.*"] border pixel 0
 # Gap size
 gaps inner 8
+smart_gaps on
 # Set up gap adjusting mode
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
