@@ -259,6 +259,7 @@ for_window [class="Petal"] floating enable
 for_window [class="card-demo"] floating enable
 for_window [class="netease-cloud-music"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
 # Auto move workspaces to screens
 workspace 10 output HDMI-2
 # DPI Setting
@@ -274,6 +275,8 @@ exec --no-startup-id fcitx
 # Notification
 exec --no-startup-id deadd-notification-center
 exec --no-startup-id /home/rapiz/Source/cmdlet/qqMsg.sh
+# Play/Pause when headphones plug/unplug
+exec --no-startup-id /home/rapiz/Source/cmdlet/headphones-playpause.sh
 # Handle multi-montiors
 exec --no-startup-id $HOME/.screenlayout/home.sh
 # Set wallpapers
