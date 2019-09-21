@@ -8,13 +8,12 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set shiftround
+set clipboard=unnamedplus
 sy on
 " }}}
 " Mapping Settings {{{
 let mapleader = ","
-noremap<C-c> "+y
-noremap<C-a> <Esc>ggvG
-noremap<C-v> <Esc>"+p
+noremap<C-a> <Esc>ggvG$
 inoremap { {}<Esc>i
 " }}}
 " Greetings {{{
