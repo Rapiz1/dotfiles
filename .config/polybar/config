@@ -17,11 +17,12 @@
 ;==========================================================
 
 [colors]
-background = #46000000
+background = #00000000
+
 background-alt = #46555555
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #00b5fa
+foreground = #000000
+foreground-alt = #0063ff
+primary = #000000
 secondary = #e60053
 alert = #bd2c40
 
@@ -46,7 +47,7 @@ line-color = #f00
 ;border-size = 4
 ;border-color = #00000000
 
-padding-right = 0
+padding-right = 1
 
 ;module-margin-left = 1
 module-margin-right = 2
@@ -62,12 +63,12 @@ font-5 = "Symbols Nerd Font:size=13;4"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed filesystem  memory eth battery-combined-udev acm-code ssr-status
+modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed ssr-status filesystem  memory eth acm-code  battery-combined-udev 
 tray-position = right
 tray-maxsize = 22
 ;tray-padding = 2
 ;tray-offset-y = -3
-;tray-background = #0063ff
+tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -84,7 +85,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:50:...%
+label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -164,12 +165,9 @@ wrapping-scroll = false
 pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
@@ -273,7 +271,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-date = %{A1:kill -s USR1 $(pidof deadd-notification-center):}%A, %d %B %Y  %H:%M:%%{F#00b5fa}%S%%{F-}%{A}
+date = %{A1:kill -s USR1 $(pidof deadd-notification-center):}%A, %d %B %Y  %H:%M:%%{F#0063ff}%S%%{F-}%{A}
 ;date-alt = %Y/%m/%d  %H:%M:%%{F#fba922}%S%%{F-}
 
 [module/pulseaudio]

@@ -44,8 +44,9 @@ output.close()
 if (color == '#00FF00'):
 	print('', end='')
 else:
-	print('%{u'+color+'}'+'%{F' + color +'}' + '%{u-}%{F-}', end='')
-'''
-else:
 	print('%{u'+color+'}'+'%{u-}', end='')
 '''
+else:
+	print('%{u'+color+'}'+'%{F' + color +'}' + '%{u-}%{F-}', end='')
+'''
+
