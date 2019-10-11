@@ -6,7 +6,7 @@ set autoread
 set autoindent
 set shiftwidth=2
 set tabstop=2
-set expandtab
+" set expandtab
 set shiftround
 set clipboard=unnamedplus
 sy on
