@@ -65,7 +65,7 @@ font-5 = "Symbols Nerd Font:size=13;4"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed filesystem  memory eth battery-combined-udev acm-code
+modules-right = player-mpris-simple pulseaudio backlight-acpi netspeed filesystem  memory eth battery-combined-udev acm-code ssr-status
 tray-position = right
 tray-maxsize = 22
 ;tray-padding = 2
