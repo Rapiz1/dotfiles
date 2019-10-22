@@ -101,7 +101,6 @@ alias tss="proxychains"
 alias lsd="ls -ltr"
 alias diff="diff --color"
 
-
 work=~/Source/work
 : ~work
 

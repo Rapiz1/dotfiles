@@ -4,8 +4,8 @@ set hls
 set go=
 set autoread
 set autoindent
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 " set expandtab
 " set shiftround
 set clipboard=unnamedplus
