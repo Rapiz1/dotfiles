@@ -263,6 +263,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="snake"] floating enable
+for_window [class="electronic-wechat"] floating enable
 # Auto move workspaces to screens
 # workspace 10 output HDMI-2
 # DPI Setting

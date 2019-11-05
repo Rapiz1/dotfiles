@@ -1,4 +1,8 @@
 #!/bin/bash
+if pgrep qqMsg > /dev/null
+then
+	exit
+fi
 i=0
 inotifywait -mq -e access /home/rapiz/Source/cmdlet/qqMsg.wav | while read event
 do
