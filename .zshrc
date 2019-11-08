@@ -101,6 +101,11 @@ alias tss="proxychains"
 alias lsd="ls -ltr"
 alias diff="diff --color"
 
+# ics env
+export NEMU_HOME=/home/rapiz/Source/ics2019/nemu
+export AM_HOME=/home/rapiz/Source/ics2019/nexus-am
+export NAVY_HOME=/home/rapiz/Source/ics2019/navy-apps
+
 work=~/Source/work
 : ~work
 
