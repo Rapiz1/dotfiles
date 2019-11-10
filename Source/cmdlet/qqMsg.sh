@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if pgrep qqMsg > /dev/null
 then
 	exit

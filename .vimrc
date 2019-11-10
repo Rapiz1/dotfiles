@@ -9,19 +9,16 @@ set tabstop=2
 " set expandtab
 " set shiftround
 set clipboard=unnamedplus
+set noshowmode
+" let g:airline_theme='jellybeans'
 sy on
+filetype plugin on
 " }}}
 " Mapping Settings {{{
 let mapleader = ","
 noremap<C-a> <Esc>ggvG$
 inoremap { {}<Esc>i
 " }}}
-" Greetings {{{
-function ShowGreeting()
-  echom "Happy Hacking:)"
-endfunction
-autocmd VimEnter * call ShowGreeting()
-"}}}
 " Languages Specifics {{{
 " CPP
 function CreateCPP()
@@ -73,3 +70,27 @@ augroup filetype_py
   autocmd FileType python call OpenPython()
 augroup END
 "}}}
+" NREDCommenter Mapping {{{
+let g:NERDCreateDefaultMappings = 0
+vnoremap / :call NERDComment(1, 'toggle')<Enter>
+vnoremap <leader>/ :call NERDComment(1, 'sexy')<Enter>
+" }}}
+" NERDTree Settings {{{
+noremap <C-z> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }}}
+" CtrlP-NERDTree Compatiable {{{
+function! CtrlPCommand()
+    let c = 0
+    let wincount = winnr('$')
+    " Don't open it here if current buffer is not writable (e.g. NERDTree)
+    while !empty(getbufvar(+expand("<abuf>"), "&buftype")) && c < wincount
+        exec 'wincmd w'
+        let c = c + 1
+    endwhile
+    exec 'CtrlP'
+endfunction
+let g:ctrlp_cmd = 'call CtrlPCommand()'
+" }}}

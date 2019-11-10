@@ -278,7 +278,7 @@ exec --no-startup-id compton -b
 exec --no-startup-id fcitx
 # Notification
 exec --no-startup-id deadd-notification-center
-exec --no-startup-id /home/rapiz/Source/cmdlet/qqMsg.sh
+exec --no-startup-id sh /home/rapiz/Source/cmdlet/qqMsg.sh
 # Play/Pause when headphones plug/unplug
 exec --no-startup-id /home/rapiz/Source/cmdlet/headphones-playpause.sh
 # Handle multi-montiors
