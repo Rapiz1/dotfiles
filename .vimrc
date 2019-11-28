@@ -4,6 +4,7 @@ set hls
 set go=
 set autoread
 set autoindent
+set smartindent
 set shiftwidth=2
 set tabstop=2
 " set expandtab
@@ -20,6 +21,26 @@ noremap<C-a> <Esc>ggvG$
 inoremap { {}<Esc>i
 " }}}
 " Languages Specifics {{{
+" C
+function OpenC()
+	set cindent
+  set makeprg=g++\ %\ -Wall\ -g
+  nnoremap <F12> :w<Enter>:make<Enter>
+endfunction
+function CreateC()
+  0read ~/.vim/template/template.c
+  :8
+  :read !date -R
+  execute "normal i *          "
+  :13
+endfunction
+
+augroup cGroup
+  autocmd!
+  autocmd BufNewFile *.c call CreateC()
+  autocmd FileType c call OpenC()
+augroup END
+
 " CPP
 function CreateCPP()
   0read ~/.vim/template/template.cpp
@@ -32,7 +53,6 @@ endfunction
 function OpenCPP()
   set cindent
   set makeprg=g++\ %\ -Wall\ -g
-  nnoremap <F10> :!konsole -e 'sh -c "./a.out;read -p done;"'<Enter>
   nnoremap <F12> :w<Enter>:make<Enter>
 endfunction
 
@@ -62,7 +82,6 @@ function OpenPython()
   set softtabstop=4
   set shiftwidth=4
   set expandtab
-  set autoindent
 endfunction
 
 augroup filetype_py
