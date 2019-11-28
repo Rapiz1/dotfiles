@@ -1,3 +1,25 @@
+" Vim-plug Settings {{{
+call plug#begin('~/.vim/plugged')
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'yggdroot/indentline'
+" Colorscheme
+Plug 'mhartington/oceanic-next'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'arcticicestudio/nord-vim'
+call plug#end()
+" }}}
+" Colorscheme {{{
+sy on
+set termguicolors
+colo onehalfdark
+let g:airline_powerline_fonts = 1
+" }}}
 " Basic Settings {{{
 set number
 set hls
@@ -7,12 +29,8 @@ set autoindent
 set smartindent
 set shiftwidth=2
 set tabstop=2
-" set expandtab
-" set shiftround
 set clipboard=unnamedplus
 set noshowmode
-" let g:airline_theme='jellybeans'
-sy on
 filetype plugin on
 " }}}
 " Mapping Settings {{{
