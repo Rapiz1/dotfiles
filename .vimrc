@@ -23,6 +23,7 @@ let g:airline_powerline_fonts = 1
 " Basic Settings {{{
 set number
 set hls
+set ignorecase
 set go=
 set autoread
 set autoindent
