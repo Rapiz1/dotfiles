@@ -238,7 +238,8 @@ mode "$mode_gaps_outer" {
 exec --no-startup-id xset s 60 60
 exec --no-startup-id xset -dpms
 set $Locker /home/rapiz/.local/bin/locker
-exec --no-startup-id xss-lock -n /home/rapiz/Source/cmdlet/dim-screen.sh -- $Locker
+#set $Locker dm-tool lock
+exec --no-startup-id xss-lock -- $Locker
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (p) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
