@@ -1,0 +1,256 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#TabsToolbar {
+    visibility: collapse !important;
+}
+#sidebar-header {
+  display: none;
+}
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/*
+ * Makes urlbar and many other things sharper on the edges
+ *
+ * Contributor(s): DrPugsley
+ */
+
+:root {
+  --toolbarbutton-border-radius: 0px !important;
+}
+
+/*
+ *  Thin sidebar spliter By Rapiz
+ */
+#sidebar-splitter {
+	display:none !important;
+}
+#sidebar-box{
+	border-right: 1px solid var(--chrome-content-separator-color) !important;
+} 
+
+/*
+ * Description: Autohides the Tracking Protection icon.
+ *
+ * Contributor(s): Rapiz
+ */
+/*
+#tracking-protection-icon-container {
+	overflow: hidden !important;
+}
+#tracking-protection-icon-container, #permissions-granted-icon {
+	transition: all 100ms ease 100ms;
+	width: 0px !important;
+}
+
+#urlbar-container:hover #tracking-protection-icon-container{
+	width: 28px !important;
+}
+#urlbar-container:hover #permissions-granted-icon {
+	width: 16px !important;
+}
+*/
+
+/*
+ * Description: Autohides bookmarks bar
+ */
+#PersonalToolbar {
+	transition: margin 0.25s ease 0.2s !important;
+	position: relative !important;
+	z-index: 1 !important;
+	margin-top: -25px !important;
+	-moz-window-dragging: no-drag !important;
+	border-bottom: 1px solid var(--chrome-content-separator-color) !important;
+}
+
+#nav-bar {
+	z-index: 2 !important;
+}
+
+#navigator-toolbox:hover #PersonalToolbar {
+	margin-top: 0px !important;
+	margin-bottom: -25px !important;
+}
+
+/*
+ * Floating sidebar
+ */
+@media screen and (max-width: 960px) {
+#appcontent {
+	margin-left: 35px;
+}
+#sidebar-box:not([hidden]), #sidebar:not([hidden]) {
+  min-width: 35px;
+  max-width: 35px;
+}
+#sidebar-box:not([hidden]) {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  border-right: 1px solid #cdc7c2;
+  transition: all 0.2s ease;
+	transition-property: min-width, max-width;
+}
+#sidebar:hover,
+#sidebar-box:hover {
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+#sidebar-splitter {
+  display: none;
+}
+
+/*
+ * You need to subtract the height of the panels above sidebar: toolbar (with the URL),
+ * bookmarks bar, etc. -- whichever is enabled/displayed.
+ * You can see which mode (normal, compact or touch) you’re in by going to:
+ * Firefox Menu → Customize… (at the bottom of the screen) → Density
+ *
+ *                | normal | compact | touch
+ * Menu bar       |  27px  |   27px  |  27px
+ * Tab bar        |  33px  |   29px  |  41px
+ * Toolbar        |  40px  |   32px  |  40px
+ * Bookmarks bar  |  23px  |   21px  |  27px
+ * Sidebar header |  47px  |   47px  |  47px
+ *
+ * Ex: in compact mode:
+ * - menu bar, tab bar and sidebar header hidden (0px)
+ * - nav bar (32px) + bookmarks bar (21px) = 53px
+ */
+#sidebar {
+  height: calc(100vh - 32px);
+}
+
+/*
+#sidebar-box:not([hidden]) ~ #appcontent {
+  margin-left: 4vw;
+}
+*/
+
+#main-window[inFullscreen][inDOMFullscreen] #appcontent {
+  margin-left: 0 !important;
+}
+
+#main-window[inFullscreen] #sidebar {
+  height: 100vh;
+}
+}
+
+
+
+/*
+ * Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
+ */
+/*
+#nav-bar toolbarbutton {
+    margin-left: -28px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: all 100ms ease 100ms !important;
+}
+
+#nav-bar:hover toolbarbutton,
+#nav-bar:hover #stop-reload-button,
+#nav-bar:hover #PanelUI-button {
+	margin: 0px !important;
+  transform: scale(1, 1) !important;
+	opacity:1 !important;
+	margin-left:0 !important;
+	pointer-events: auto !important;
+}
+*/
+.urlbar-history-dropmarker {
+	display: none !important;
+}
+
+
+#nav-bar toolbarbutton, #page-action-buttons,
+#PanelUI-button, #stop-reload-button, #tracking-protection-icon-container{
+	transition: all 0.2s ease 0.2s !important;
+}
+
+#PanelUI-button {
+	margin-right: -40px!important;
+}
+#nav-bar:hover #PanelUI-button
+#nav-bar:focus-within #PanelUI-button {
+	margin-right: 0px !important;
+}
+
+#stop-reload-button {
+	margin-right: -20px !important;
+}
+#nav-bar:hover #stop-reload-button,
+#nav-bar:focus-within #stop-reload-button {
+	margin-right: 0px !important;
+}
+
+#nav-bar toolbarbutton, #page-action-buttons,
+#tracking-protection-icon-container {
+	margin-left: -28px !important;
+	opacity: 0 !important;
+}
+
+#nav-bar:hover toolbarbutton, #nav-bar:hover #page-action-buttons,
+#nav-bar:hover #tracking-protection-icon-container,
+#nav-bar:focus-within toolbarbutton, #nav-bar:focus-within #page-action-buttons,
+#nav-bar:focus-within #tracking-protection-icon-container {
+	margin-left: 0px !important;
+	opacity: 1 !important;
+}
+
+
+
+/* random style tweaks I like */
+/* nav bar is semi opaque when unhovered */
+/*
+#nav-bar > * {
+	opacity:0.5;
+}
+
+#nav-bar:hover > * {
+	opacity:1 !important;
+}
+
+#urlbar {
+	opacity:1 !important;
+}
+
+#urlbar .urlbar-input-box {
+	opacity:1 !important;
+}
+*/
+
+/*
+#urlbar, .searchbar-textbox {
+	border: 0px !important;
+	height: 20px !important;
+}
+
+#urlbar {
+	margin-left: 1px !important;
+	margin-right: 1px !important;
+}
+
+.tab-background {
+	border-top: none !important;
+}
+
+.tabs-newtab-button, #new-tab-button, #alltabs-button {
+	color: rgba(240, 240, 240, 1);
+	border-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+
+window:not([chromehidden~="toolbar"]) #urlbar-container > .toolbarbutton-1:-moz-any([disabled], :not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon[class] {
+
+	box-shadow: none !important;
+	border: 0px !important;
+}
+*/
+
