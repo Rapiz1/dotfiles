@@ -58,21 +58,25 @@
  * Description: Autohides bookmarks bar
  */
 #PersonalToolbar {
-	transition: margin 0.25s ease 0.2s !important;
+	transition: margin 0.15s ease 0.2s !important;
+	transition-property: margin, opacity !important;
 	position: relative !important;
 	z-index: 1 !important;
 	margin-top: -25px !important;
 	-moz-window-dragging: no-drag !important;
 	border-bottom: 1px solid var(--chrome-content-separator-color) !important;
+	opacity: 0;
 }
 
 #nav-bar {
 	z-index: 2 !important;
 }
 
+#navigator-toolbox:focus-within #PersonalToolbar,
 #navigator-toolbox:hover #PersonalToolbar {
 	margin-top: 0px !important;
 	margin-bottom: -25px !important;
+	opacity: 1 !important;
 }
 
 /*
@@ -170,22 +174,22 @@
 
 #nav-bar toolbarbutton, #page-action-buttons,
 #PanelUI-button, #stop-reload-button, #tracking-protection-icon-container{
-	transition: all 0.2s ease 0.2s !important;
+	transition: all 0.15s ease 0.2s !important;
 }
 
 #PanelUI-button {
 	margin-right: -40px!important;
 }
-#nav-bar:hover #PanelUI-button
-#nav-bar:focus-within #PanelUI-button {
+#navigator-toolbox:hover #PanelUI-button,
+#navigator-toolbox:focus-within #PanelUI-button {
 	margin-right: 0px !important;
 }
 
 #stop-reload-button {
 	margin-right: -20px !important;
 }
-#nav-bar:hover #stop-reload-button,
-#nav-bar:focus-within #stop-reload-button {
+#navigator-toolbox:hover #stop-reload-button,
+#navigator-toolbox:focus-within #stop-reload-button {
 	margin-right: 0px !important;
 }
 
@@ -195,27 +199,28 @@
 	opacity: 0 !important;
 }
 
-#nav-bar:hover toolbarbutton, #nav-bar:hover #page-action-buttons,
-#nav-bar:hover #tracking-protection-icon-container,
-#nav-bar:focus-within toolbarbutton, #nav-bar:focus-within #page-action-buttons,
-#nav-bar:focus-within #tracking-protection-icon-container {
+#navigator-toolbox:hover #nav-bar toolbarbutton:not([disabled="true"]) , #navigator-toolbox:hover #page-action-buttons,
+#navigator-toolbox:hover #tracking-protection-icon-container,
+#navigator-toolbox:focus-within #nav-bar toolbarbutton, #navigator-toolbox:focus-within #page-action-buttons,
+#navigator-toolbox:focus-within #tracking-protection-icon-container {
 	margin-left: 0px !important;
 	opacity: 1 !important;
 }
 
 
-
 /* random style tweaks I like */
 /* nav bar is semi opaque when unhovered */
-/*
-#nav-bar > * {
-	opacity:0.5;
+#nav-bar {
+	opacity: 0.5 !important;
+	transition: opacity 0.2s ease !important;
 }
 
-#nav-bar:hover > * {
+
+#navigator-toolbox:hover #nav-bar,
+#nav-bar:focus-within {
 	opacity:1 !important;
 }
-
+/*
 #urlbar {
 	opacity:1 !important;
 }

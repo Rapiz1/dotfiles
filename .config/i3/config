@@ -283,7 +283,7 @@ exec --no-startup-id fcitx
 exec --no-startup-id deadd-notification-center
 exec --no-startup-id sh /home/rapiz/Source/cmdlet/qqMsg.sh
 # Play/Pause when headphones plug/unplug
-exec --no-startup-id /home/rapiz/Source/cmdlet/headphones-playpause.sh
+# exec --no-startup-id /home/rapiz/Source/cmdlet/headphones-playpause.sh
 # Handle multi-montiors
 # exec --no-startup-id $HOME/.screenlayout/home.sh
 # Set wallpapers
@@ -291,3 +291,12 @@ exec --no-startup-id nitrogen --restore
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Don’t treat Plasma pop-ups as full-sized windows
+for_window [class="plasmashell"] floating enable
+
+# Don’t spawn an empty window for the Plasma Desktop
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+
+# Don’t let notifications and non-interactive pop-up windows steal focus
+no_focus [class="plasmashell" window_type="notification"]
+no_focus [class="plasmashell" window_type="on_screen_display"]
