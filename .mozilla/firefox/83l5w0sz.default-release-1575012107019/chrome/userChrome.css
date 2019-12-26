@@ -126,7 +126,7 @@
  * - nav bar (32px) + bookmarks bar (21px) = 53px
  */
 #sidebar {
-  height: calc(100vh - 32px);
+  height: calc(100vh - 30px);
 }
 
 /*
@@ -195,10 +195,13 @@
 
 #nav-bar toolbarbutton, #page-action-buttons,
 #tracking-protection-icon-container {
-	margin-left: -28px !important;
+	margin-left: -26px !important;
 	opacity: 0 !important;
 }
 
+#nav-bar toolbarbutton[disabled="true"] {
+	pointer-events: none !important;
+}
 #navigator-toolbox:hover #nav-bar toolbarbutton:not([disabled="true"]) , #navigator-toolbox:hover #page-action-buttons,
 #navigator-toolbox:hover #tracking-protection-icon-container,
 #navigator-toolbox:focus-within #nav-bar toolbarbutton, #navigator-toolbox:focus-within #page-action-buttons,
