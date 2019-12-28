@@ -181,7 +181,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # Microphone
 bindsym XF86AudioMicMute exec amixer -q set Capture toggle
 # Move windows between workspaces
-bindysm $mod+x move workspace to output right
+bindsym $mod+x move workspace to output right
 # Brightness
 bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
 bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
@@ -189,7 +189,7 @@ bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
 bindsym Print exec "spectacle" 
 # Scratchpad
 bindsym $mod+o scratchpad show
-bindsym $mod+p move scratchpad
+bindsym $mod+Shift+o move scratchpad
 # i3-gaps setting
 # Border size
 for_window [class="^.*"] border pixel 0
