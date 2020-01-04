@@ -131,7 +131,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -256,7 +256,7 @@ bindsym $mod+Delete mode "$mode_system"
 # Auto move windows to workspaces
 assign [class="VirtualBox"] 10
 # Auto float
-for_window [class="Petal"] floating enable
+for_window [class="petal"] floating enable
 for_window [class="card-demo"] floating enable
 for_window [class="netease-cloud-music"] floating enable
 for_window [class="Blueman-manager"] floating enable

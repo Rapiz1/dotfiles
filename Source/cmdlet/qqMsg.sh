@@ -1,6 +1,7 @@
 #!/bin/sh
-if pgrep qqMsg > /dev/null
+if pgrep inotifywait > /dev/null
 then
+	echo qqMsg.sh: Duplicated. Exiting.
 	exit
 fi
 i=0
