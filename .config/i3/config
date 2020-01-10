@@ -273,6 +273,7 @@ for_window [class="yakuake"] floating enable
 # exec --no-startup-id xrandr --dpi 220
 # Autostart
 exec --no-startup-id nm-applet
+exec --no-startup-id autorandr -c
 #exec --no-startup-id /usr/lib/org_kde_powerdevil
 exec --no-startup-id kdeconnect-indicator
 # Compositor
