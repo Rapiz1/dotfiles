@@ -33,7 +33,7 @@ green = #00FF66
 
 [bar/example]
 ;monitor = ${env:MONITOR:}
-monitor = eDP-1
+monitor = HDMI-2
 width = 100%
 height = 30
 ;offset-x = 1%
@@ -518,7 +518,7 @@ screenchange-reload = true
 [global/wm]
 margin-bottom = 0
 [bar/second]
-monitor = HDMI-2
+monitor = eDP-1
 modules-left = i3 xwindow
 modules-center = 
 modules-right = date

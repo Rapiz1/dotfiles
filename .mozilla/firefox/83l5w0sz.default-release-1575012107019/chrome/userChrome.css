@@ -83,20 +83,26 @@
  * Floating sidebar
  */
 @media screen and (max-width: 960px) {
+	/*
 #appcontent {
 	margin-left: 35px;
 }
+*/
 #sidebar-box:not([hidden]), #sidebar:not([hidden]) {
   min-width: 35px;
   max-width: 35px;
 }
 #sidebar-box:not([hidden]) {
+	/*
   display: block;
+	*/
   position: fixed;
   overflow: hidden;
   border-right: 1px solid #cdc7c2;
+	/*
   transition: all 0.2s ease;
 	transition-property: min-width, max-width;
+	*/
 }
 #sidebar:hover,
 #sidebar-box:hover {
