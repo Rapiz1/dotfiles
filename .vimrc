@@ -7,6 +7,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+let g:indentLine_concealcursor = 'c'
 Plug 'yggdroot/indentline'
 " Colorscheme
 Plug 'mhartington/oceanic-next'
