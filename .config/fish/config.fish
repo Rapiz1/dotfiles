@@ -19,10 +19,10 @@ alias sv="sudo -E vim"
 export BROWSER="firefox"
 export EDITOR="vim"
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 # ics env
-export NEMU_HOME=/home/rapiz/Source/ics2019/nemu
-export AM_HOME=/home/rapiz/Source/ics2019/nexus-am
-export NAVY_HOME=/home/rapiz/Source/ics2019/navy-apps
+#export NEMU_HOME=/home/rapiz/Source/ics2019/nemu
+#export AM_HOME=/home/rapiz/Source/ics2019/nexus-am
+#export NAVY_HOME=/home/rapiz/Source/ics2019/navy-apps
