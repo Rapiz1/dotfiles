@@ -1,6 +1,7 @@
 " Vim-plug Settings {{{
 call plug#begin('~/.vim/plugged')
 " Plug 'itchyny/lightline.vim'
+Plug 'zxqfl/tabnine-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
