@@ -4,9 +4,10 @@ set -g theme_date_format "+%F %T"
 set -g fish_prompt_pwd_dir_length 8
 
 set -U FZF_COMPLETE 0
-set -g FZF_DEFAULT_OPTS "--layout=reverse --height=40%"
+set FZF_DEFAULT_OPTS "--layout=reverse --height=40% -i"
 
-set -g ENHANCD_DISABLE_DOT 1
+#set -g ENHANCD_DISABLE_DOT 1
+set -g ENHANCD_DOT_ARG "..."
 
 alias j cd
 alias open "kde-open5 2>/dev/null"
