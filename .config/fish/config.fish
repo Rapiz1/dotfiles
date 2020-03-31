@@ -8,6 +8,7 @@ set FZF_DEFAULT_OPTS "--layout=reverse --height=40% -i"
 
 #set -g ENHANCD_DISABLE_DOT 1
 set -g ENHANCD_DOT_ARG "..."
+set -a PATH $HOME/.local/bin
 
 alias j cd
 alias open "kde-open5 2>/dev/null"
