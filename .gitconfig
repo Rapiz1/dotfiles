@@ -1,5 +1,8 @@
 [user]
 	email = rapiz@foxmail.com
 	name = Rapiz
+	signingkey = 5099FD92A9468760
 [core]
 	editor = vim
+[commit]
+	gpgsign = true
