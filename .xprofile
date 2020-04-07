@@ -1,6 +1,9 @@
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-
+#GTK_IM_MODULE=fcitx5
+#XMODIFIERS=@im=fcitx
+#QT_IM_MODULE=fcitx5
 #export QT_QPA_PLATFORMTHEME="qt5ct"
 #export QT_PLUGIN_PATH=$HOME/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/
+export GTK_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=fcitx5
+fcitx5 > /dev/null &
