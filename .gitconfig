@@ -6,3 +6,7 @@
 	editor = vim
 [commit]
 	gpgsign = true
+[http]
+	proxy = localhost:7879
+[https]
+	proxy = localhost:7879
