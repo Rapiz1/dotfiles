@@ -7,3 +7,5 @@ export GTK_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULE=fcitx5
 fcitx5 > /dev/null &
+xsettingsd &
+
