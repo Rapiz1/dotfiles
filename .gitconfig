@@ -1,6 +1,6 @@
 [user]
-	email = rapiz@foxmail.com
-	name = Rapiz
+	email = code@rapiz.com
+	name = Yujia Qiao
 	signingkey = 5099FD92A9468760
 [core]
 	editor = vim
@@ -10,3 +10,6 @@
 	proxy = localhost:7879
 [https]
 	proxy = localhost:7879
+[format]
+	signOff = True
+
