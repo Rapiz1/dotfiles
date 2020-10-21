@@ -17,7 +17,8 @@ alias tss="proxychains -q"
 alias lsd="ls -ltr"
 alias diff="diff --color"
 alias sv="sudo -E vim"
-alias cat="bat"
+
+alias cat bat
 
 export BROWSER="firefox"
 export EDITOR="vim"
