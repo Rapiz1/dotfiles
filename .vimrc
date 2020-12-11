@@ -196,3 +196,6 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 " }}}
+" Assembly Synatx Settings {{{
+au BufRead,BufNewFile *.asm set syntax=masm
+" }}}
