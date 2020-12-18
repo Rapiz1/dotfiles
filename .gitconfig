@@ -7,9 +7,9 @@
 [commit]
 	gpgsign = true
 [http]
-	proxy = localhost:7879
+	proxy = localhost:7890
 [https]
-	proxy = localhost:7879
+	proxy = localhost:7890
 [format]
 	signOff = True
 
