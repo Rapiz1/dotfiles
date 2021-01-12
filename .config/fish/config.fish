@@ -17,6 +17,7 @@ alias tss="proxychains -q"
 alias lsd="ls -ltr"
 alias diff="diff --color"
 alias sv="sudo -E vim"
+alias proxy="env HTTPS_PROXY=http://localhost:7890 HTTP_PROXY=http://localhost:7890"
 
 alias cat bat
 
