@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 let g:indentLine_concealcursor = 'c'
 Plug 'yggdroot/indentline'
+Plug 'dag/vim-fish'
 " Colorscheme
 Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}

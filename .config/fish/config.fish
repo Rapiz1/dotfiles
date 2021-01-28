@@ -3,7 +3,7 @@ set -g theme_nerd_fonts yes
 set -g theme_date_format "+%F %T"
 set -g fish_prompt_pwd_dir_length 8
 
-set -U FZF_COMPLETE 0
+set -g FZF_COMPLETE 2
 set FZF_DEFAULT_OPTS "--layout=reverse --height=40% -i"
 
 #set -g ENHANCD_DISABLE_DOT 1
@@ -29,6 +29,5 @@ export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 # ics env
-#export NEMU_HOME=/home/rapiz/Source/ics2019/nemu
-#export AM_HOME=/home/rapiz/Source/ics2019/nexus-am
-#export NAVY_HOME=/home/rapiz/Source/ics2019/navy-apps
+export NEMU_HOME=/home/rapiz/Source/ics2020/nemu
+export AM_HOME=/home/rapiz/Source/ics2020/abstract-machine
