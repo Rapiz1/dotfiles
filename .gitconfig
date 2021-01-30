@@ -4,6 +4,9 @@
 	signingkey = 5099FD92A9468760
 [core]
 	editor = vim
+	abbrev = 12
+[pretty]
+  fixes = Fixes: %h (\"%s\")
 [commit]
 	gpgsign = true
 [http]
